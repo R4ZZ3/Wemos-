@@ -20,8 +20,8 @@ char* toiminnassa[] = {"Olen kuningas! @RasmusToivanen", "Olen hengissä @Rasmus
 #include <ESP8266WiFi.h> // Kirjasto internetyhteyden käyttämiseksi
 
 // Rasmuksen puhelimen wifin tunnus ja salasana :)
-const char* ssid     = "rt";
-const char* password = "R4ZZ392!";
+const char* ssid     = "****"; // Insert ssid here
+const char* password = "*****"; // Insert password here
 
 const char* host = "api.thingspeak.com"; // Nettisivu jonka APIn kautta saadaan viestit twitteriin
 
@@ -46,7 +46,7 @@ void setup() {
   
   // Arvotaan joku ilmoitus ja laitetaan se twitteriin
   int arpa = ( rand() % 8 ) ; //randomi väliltä 0-7
-  char url[150] = "/apps/thingtweet/1/statuses/update?api_key=9X14CF5SMEJ48I23&status=";
+  char url[150] = "/apps/thingtweet/1/statuses/update?api_key=****&status="; // insert api key here
   strcat(url, toiminnassa[arpa]); 
   // nyt muuttuja "url" on internetosoite muotoa api.thingspeak.com/apps/.....&status=LÄHETETTÄVÄVIESTI
   
@@ -92,7 +92,7 @@ void lahetys() {
   
   // Luodaan taas nettiosoite+viesti jolla saadaan viesti twitteriin
   int arpa = ( rand() % 12 ) ; //randomi väliltä 0-12
-  char url[150] = "/apps/thingtweet/1/statuses/update?api_key=9X14CF5SMEJ48I23&status=";
+  char url[150] = "/apps/thingtweet/1/statuses/update?api_key=****&status="; // insert Thingtweet api key here
   strcat(url, saapumisilmoitus[arpa]); 
   
   // Mennään siihen internetosoitteeseen
@@ -122,7 +122,7 @@ void haku() {
   delay(1500);
 }
 
-// Tässä kaikki mitä tarvittiin, Yhteensä noin 120 riviä koodia (sisältäen tyhjät rivit ja kommenttirivit)
 
-// Mitä kaikkea sitä pystytäänkään tekemään 10 000 tai miljoonalla rivillä?
+
+
 
