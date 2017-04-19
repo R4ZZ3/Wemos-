@@ -7,8 +7,8 @@ const int sleepSeconds = 600;
 
 #include <ESP8266WiFi.h>
 
-const char* ssid     = "NETGEAR61";
-const char* password = "curlygadfly298";
+const char* ssid     = "******"; //insert ssid ******
+const char* password = "*******";  // insert password
 
 const char* host = "api.thingspeak.com";
 
@@ -109,7 +109,7 @@ void lahetys() {
   }
   
   // We now create a URI for the request
-  String url = "/apps/thingtweet/1/statuses/update?api_key=9X14CF5SMEJ48I23&status=Hei @ ";
+  String url = "/apps/thingtweet/1/statuses/update?api_key=*********&status=Hei @ ";  // insert Api key from Thingspeak(Thingtweet) here
   Serial.print("Requesting URL: ");
   Serial.println(url);
   
