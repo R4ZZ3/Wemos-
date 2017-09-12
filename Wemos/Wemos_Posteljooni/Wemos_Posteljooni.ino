@@ -138,7 +138,7 @@ void lahetys() {
   
   // We now create a URI for the request
   //srand(time(NULL));
-  int arpa = ( rand() % 12 ) ; //randomi väliltä 0-12
+  int arpa = ( rand() % 12 ) ; //randomi tweettaus saapumisilmoituslistalta
   char url[150] = "/apps/thingtweet/1/statuses/update?api_key=*****INSERT_API_KEY_HERE****"&status=";
   strcat(url, saapumisilmoitus[arpa]); 
   Serial.print("Requesting URL: ");
@@ -180,7 +180,7 @@ void haku() {
   }
   
   // We now create a URI for the request
-  int arpa = ( rand() % 10 ) ; //randomi väliltä 0-9
+  int arpa = ( rand() % 10 ) ; //randomi tweettaus postityhjä-listalta
   char url[150] = "/apps/thingtweet/1/statuses/update?api_key=9X14CF5SMEJ48I23&status=";
   strcat(url, postityhja[arpa]); 
   Serial.print("Requesting URL: ");
